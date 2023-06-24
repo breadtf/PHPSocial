@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>RetroMedia - User Login</title>
+    <title>PHPSocial - User Login</title>
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>

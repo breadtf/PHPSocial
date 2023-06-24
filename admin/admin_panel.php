@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>RetroMedia - Admin Panel</title>
+    <title>PHPSocial - Admin Panel</title>
     <link rel="stylesheet" href="/css/admin.css">
 </head>
 <body>
