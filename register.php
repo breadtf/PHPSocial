@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>RetroMedia - User Registration</title>
+    <title>PHPSocial - User Registration</title>
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
