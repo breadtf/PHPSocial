@@ -53,44 +53,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="/css/admin.css">
 </head>
 <body>
-    <h2>Admin Panel</h2>
-    <a href="/">Back</a>
-    <h3>Posts:</h3>
-    <?php foreach (array_reverse($messages) as $postId => $post): ?>
-        <div>
-            <hr>
-            <p>@<?php echo $post['author']; ?></p>
-            <p><?php echo $post['content']; ?></p>
-            <form method="POST" action="">
-                <input type="hidden" name="post_id" value="<?php echo $postId; ?>">
-                <input type="submit" value="Remove Post">
-            </form>
-        </div>
-        <hr>
-    <?php endforeach; ?>
+    <?php include('sidebar.php');?>
+    <div class="wrapper">
+        <h2>IP Request Logs</h2>
 
-    <?php
-    // Load IP request logs
-    $requestLogs = json_decode(file_get_contents('../db/request_logs.json'), true);
-    ?>
-
-    <h2>IP Request Logs</h2>
-
-    <table>
-        <tr>
-            <th>IP Address</th>
-            <th>URL</th>
-            <th>Username</th>
-            <th>Timestamp</th>
-        </tr>
-        <?php foreach (array_reverse($requestLogs) as $log): ?>
+        <table>
             <tr>
-                <td><?php echo $log['ip']; ?></td>
-                <td><?php echo $log['url']; ?></td>
-                <td><?php echo isset($log['username']) ? $log['username'] : 'Logged out'; ?></td>
-                <td><?php echo $log['timestamp']; ?></td>
+                <th>IP Address</th>
+                <th>URL</th>
+                <th>Username</th>
+                <th>Timestamp</th>
             </tr>
-        <?php endforeach; ?>
-    </table>
+            <?php foreach (array_reverse($requestLogs) as $log): ?>
+                <tr>
+                    <td><?php echo $log['ip']; ?></td>
+                    <td><?php echo $log['url']; ?></td>
+                    <td><?php echo isset($log['username']) ? $log['username'] : 'Logged out'; ?></td>
+                    <td><?php echo $log['timestamp']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
 </body>
 </html>

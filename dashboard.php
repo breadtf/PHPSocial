@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title><?php echo $configs["sitename"] ?> - Dashboard</title>
-    <link rel="stylesheet" href="css/<?php echo $configs["themes"] ?>">
+    <link rel="stylesheet" href="css/<?php echo $configs["theme"] ?>">
 </head>
 <body>
     <div class="header">
@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="wrapper">
         <?php
             if ($_SESSION['admin'] == true) {
-                echo "<a href='admin/admin_panel.php'>Admin panel</a>";
+                echo "<a href='admin/'>Admin panel</a>";
             }
         ?>
         <h3>Create a Post:</h3>
