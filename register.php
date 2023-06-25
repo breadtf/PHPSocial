@@ -20,6 +20,7 @@ file_put_contents('db/request_logs.json', json_encode($requestLogs));
 
 
 <?php
+$configs = include('config.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -53,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PHPSocial - User Registration</title>
+    <title><?php echo $configs["sitename"] ?> - User Registration</title>
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>

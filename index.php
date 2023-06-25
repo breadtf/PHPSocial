@@ -19,6 +19,7 @@ file_put_contents('db/request_logs.json', json_encode($requestLogs));
 ?>
 
 <?php
+$configs = include('config.php');
 session_start();
 
 // Check if the user is already logged in
@@ -36,15 +37,15 @@ $messages = json_decode(file_get_contents('db/messages.json'), true);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PHPSocial - Home</title>
-    <link rel="stylesheet" href="css/light.css">
+    <title><?php echo $configs["sitename"] ?> - Home</title>
+    <link rel="stylesheet" href="css/<?php echo $configs["theme"] ?>">
 </head>
 <body>
     <div class="header">
         <div class="login">
             <a href="login.php">Login</a> <a href="register.php">Register</a>
         </div>
-        <h2>PHPSocial</h2>
+        <h2><?php echo $configs["sitename"] ?></h2>
     </div>
     <div class="wrapper">
 	<!-- Bad solution, but I'm way too tired to fix it, should realy do checks before we actually try to use $messages. -->

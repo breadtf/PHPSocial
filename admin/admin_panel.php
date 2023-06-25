@@ -20,7 +20,7 @@ file_put_contents('../db/request_logs.json', json_encode($requestLogs));
 
 
 <?php
-
+$configs = include('../config.php');
 session_start();
 
 // Check if the user is an admin
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PHPSocial - Admin Panel</title>
+    <title><?php echo $configs["sitename"] ?> - Admin Panel</title>
     <link rel="stylesheet" href="/css/admin.css">
 </head>
 <body>

@@ -20,6 +20,7 @@ file_put_contents('db/request_logs.json', json_encode($requestLogs));
 
 
 <?php
+$configs = include('config.php');
 session_start();
 
 // Check if the user is logged in
@@ -112,8 +113,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PHPSocial - Dashboard</title>
-    <link rel="stylesheet" href="css/light.css">
+    <title><?php echo $configs["sitename"] ?> - Dashboard</title>
+    <link rel="stylesheet" href="css/<?php echo $configs["themes"] ?>">
 </head>
 <body>
     <div class="header">
@@ -123,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="submit" name="logout" value="Logout">
             </form>
         </div>
-        <h2>PHPSocial</h2>
+        <h2><?php echo $configs["sitename"] ?></h2>
     </div>
     <div class="wrapper">
         <?php

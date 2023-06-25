@@ -20,6 +20,7 @@ file_put_contents('db/request_logs.json', json_encode($requestLogs));
 
 
 <?php
+$configs = include('config.php');
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -47,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PHPSocial - User Login</title>
+    <title><?php echo $configs["sitename"] ?> - User Login</title>
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
