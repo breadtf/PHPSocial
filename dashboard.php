@@ -128,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <div class="wrapper">
         <?php
-            if ($_SESSION['admin'] == true) {
+            if ($_SESSION['admin'] == true and $configs["adminEnabled"] === true) {
                 echo "<a href='admin/'>Admin panel</a>";
             }
         ?>
