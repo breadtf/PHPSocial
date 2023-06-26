@@ -1,7 +1,7 @@
 <?php
 // If adminEnabled is false, redirect to home page
 // This is here because every admin page has the sidebar
-if ($configs["adminEnabled" === false){
+if ($configs["adminEnabled"] === false){
     header("Location: ../index.php");
 }
 ?>
