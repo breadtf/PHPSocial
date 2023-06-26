@@ -15,5 +15,4 @@ All it needs is
 PHPSocial is probably not the most secure web app ever, and will probably not be ready for production any time soon, it's just a fun experiment to see what can be done with just PHP =)
 
 ## How to install
-Download a release and copy to your webservers root directory (usualy `/var/www/html` on GNU/Linux systems)
-Create an account and go into the `/db/login.json` file and change `admin` from `false` to `true` to become an administrator. If you've done this right, you should see an `Admin panel` link on your homepage.
+See the [Setting Up](https://github.com/BreadTeleporter/PHPSocial/wiki/Setting-Up) wiki page.
