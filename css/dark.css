@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    background-color: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper{    
+    min-width: 800px;
+    width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+}
+.login{
+    float: right;
+}
+.login a{
+    color: black;
+    font-weight: bold;
+}
+.post-textarea{
+    width: 50%;
+    height: 200px;
+    resize: none;
+}
+.header{
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom :10px;
+    background-color: #60A5FA;
+    width: 800px;
+    min-width: 800px;
+    margin: auto;
+}
+.replybox{
+    width: 80%;
+    resize: none;
+}
+.replies{
+    padding-left: 20px;
+}
