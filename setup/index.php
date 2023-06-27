@@ -10,7 +10,7 @@
 $userFile = json_decode(file_get_contents('db/login.json'), true);
 
 $userFile[] = $userFile;
-if ($userFile[0] == ""){
+if ($userFile[0] != ""){
     header("Location: ../index.php");
 }
 ?>
