@@ -34,7 +34,7 @@ $messages = json_decode(file_get_contents('db/messages.json'), true);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['content'])) {
-        $content = $_POST['content'];
+        $content = strip_tags($_POST['content'], "<a><p><b><i><blink><marquee><br>"); // Strip tags as soon as we can to prevent XSS, 
 
         // Generate a unique post ID
         $postId = uniqid();
@@ -136,6 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="createpost">
             <form method="POST" action="">
                 <textarea name="content" placeholder="Enter your message here..." required class="post-textarea"></textarea><br><br>
+                <p>Allowed tags: &ltb>, &ltp>, &lta>, &lti></p>
                 <input type="submit" value="Create Post">
             </form>
         </div>

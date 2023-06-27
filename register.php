@@ -36,6 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Username already exists. Please choose a different username.";
         exit;
     }
+    
+    // Check if the username contains a space
+    if (str_contains($username, ' ')) {
+        echo "Usernames cannot contain spaces.";
+        exit;
+    }
 
     // Add new user to the user data
     $users[$username] = [

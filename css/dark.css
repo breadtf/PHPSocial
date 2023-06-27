@@ -19,11 +19,22 @@ body{
     color: black;
     font-weight: bold;
 }
+a{
+    color: blue;
+}
 .post-textarea{
     width: 50%;
     height: 200px;
     resize: none;
-    background-color: 5d5e68;
+    background-color: #5d5e68;
+    color: white;
+}
+textarea:focus{
+    outline: none;
+}
+textarea{
+    resize: none;
+    background-color: #5d5e68;
     color: white;
 }
 .header{

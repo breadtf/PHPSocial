@@ -53,6 +53,16 @@ $messages = json_decode(file_get_contents('db/messages.json'), true);
             <a href="login.php">Login</a> <a href="register.php">Register</a>
         </div>
         <h2><?php echo $configs["sitename"] ?></h2>
+        <div class="registerBanner">
+            <?php
+            $sitename = $configs["sitename"];
+            
+            $msg = $configs["registerPrompts"];
+            $rand = rand(0, count($msg) - 1);
+            echo str_replace("[sitename]", $sitename, $msg[$rand]);
+            ?>
+            <a href="register.php">Register now!</a>
+        </div>
     </div>
     <div class="wrapper">
 	<!-- Bad solution, but I'm way too tired to fix it, should realy do checks before we actually try to use $messages. -->
