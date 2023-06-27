@@ -141,7 +141,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
         </div>
         <hr>
-        
+        <?php
+            if ($messages == null){
+                die;
+            }
+        ?>
         <?php foreach (array_reverse($messages) as $postId => $post): ?>
             <div>
                 <p>@<?php echo $post['author']; ?></p>
