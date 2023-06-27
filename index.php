@@ -22,6 +22,13 @@ file_put_contents('db/request_logs.json', json_encode($requestLogs));
 $configs = include('config.php');
 session_start();
 
+// Check if setup needs to be run
+$userFile = json_decode(file_get_contents('db/login.json'), true);
+
+$userFile[] = $userFile;
+if ($userFile[0] == ""){
+    header("Location: setup/index.php");
+}
 // Check if the user is already logged in
 if (isset($_SESSION['username'])) {
     // Redirect to the user's dashboard
