@@ -6,7 +6,7 @@ PHPSocial does not use
  - Any external libraries/dependencies
 
 All it needs is
- - PHP 7.4 or later
+ - PHP 8.0 or later
  - 100KB of hard disk space
  - Around 8MB of ram
  - And a CPU that works and supports the latter
